@@ -15,16 +15,16 @@ const UserGenome = ({character}:Props) => {
   <div>
     <Image 
     src={character.image}
-    width={96}
-    height={96}
+    width={150}
+    height={150}
     alt={`profile img character ${character.name}`}
     className='roundedd-full'
     />
-    <h1>Nombre : {character.name}</h1>
-    <h2>Origen: {character.origin.name}</h2>
-    <h2>Gender: {character.gender}</h2>
-    <h2>Actual Location: {character.location.name}</h2>
-    <h2>API URL: {character.url}</h2>
+    <h1 className='text-white'>Nombre : {character.name}</h1>
+    <h2 className='text-white'>Origen: {character.origin.name}</h2>
+    <h2 className='text-white'>Gender: {character.gender}</h2>
+    <h2 className='text-white'>Actual Location: {character.location.name}</h2>
+    <h2 className='text-white'>API URL: {character.url}</h2>
   </div>  
     // <ul className='flex flex-col justify-center mt-1'>
     //     {
