@@ -2,7 +2,7 @@ import SearchIcon from "@/components/icons/SearchIcon";
 import React from "react";
 
 interface Props {
-  getUser: (username:number)=>Promise<void>;
+  getUser: (username:string)=>Promise<void>;
 }
 
 
@@ -12,8 +12,8 @@ const FormSearchUser = ({ getUser }: Props)=>{
       e.preventDefault();
       const username= e.currentTarget.username.value
       if(!username)return;
-      await getUser(username)
       console.log(username)
+      await getUser(username)
     }
     return (
         <div className='flex justify-center w-screen'>

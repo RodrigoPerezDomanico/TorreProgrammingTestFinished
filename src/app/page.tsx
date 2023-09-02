@@ -2,30 +2,34 @@
 
 import React from 'react'
 import FormSearchUser from '@/components/FormSearchUser'
-// import { useState } from 'react';
-// import { User } from "@/interfaces/user";
+import SearchUserList from '@/components/SearchUserList'
+import { useState } from 'react';
+import { UserList } from "@/interfaces/userList";
 
 const Home = () => {
-  // const [user, setUser] = useState<User | null>(null);
-  // const [error, setError] = useState<string | null>(null);
-  const getUser = async (username:number)=>{
-    const res = await fetch(`https://rickandmortyapi.com/api/character/${username}`);
-    const data = res.json()
+  const [userlist, setUserList] = useState<UserList | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const getUser = async (username:string)=>{
+    const res = await fetch(`https://rickandmortyapi.com/api/character/?name=${username}`);
+    const data = await res.json()
     if(!res.ok){
       console.log("User not found")
-      // setUser(null);
-      // setError("User not found");
+      setUserList(null);
+      setError("User not found");
       return ;
 
     }
-
     console.log(data);
+    setUserList(data)
+    setError(null)
+
     
   }
   
   return(
     <>
   <FormSearchUser getUser={getUser}/>
+  {userlist && <SearchUserList userList={userlist}/>}
   
   </>
   )
