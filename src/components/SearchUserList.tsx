@@ -13,11 +13,12 @@ const SearchUserList = ({userList}:Props) => {
   return (
     
     <ul className='flex flex-col justify-center mt-1'>
+      
         {
         userList.results.map((character,index)=>(
           
           
-          (index<10) ? (<Character character={character}/>) : (null)
+          (index<10) ? (<Character key={character.id} character={character}/>) : (null)
             
           )
         )
