@@ -1,16 +1,9 @@
 import React from 'react'
-import SearchIcon from '@/components/Icons/SearchIcon'
+import FormSearchUser from '@/components/FormSearchUser'
 
 const Home = () => {
-  return (
-    <form>
-      <span>
-        <SearchIcon/>
-      </span>
-      <input type='text' />
-      <button>Search User</button>
-    </form>
-
+  return(
+  <FormSearchUser/>
   )
 }
 
