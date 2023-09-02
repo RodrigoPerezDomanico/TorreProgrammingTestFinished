@@ -1,13 +1,18 @@
-import {SearchContext} from './SearchContext'
+// import React from 'react'
+// import {SearchContext, useContext, useEffect, useState} from './SearchContext'
+// import useLocalStorage from ''
 
-interface props{
-    children: JSX.Element | JSX.Element[]
-}
-export const SearchProvider = ({children}):props => {
-    return (
-        <SearchContext.Provider  >
-            { children }
-        </SearchContext.Provider>
 
-    )
-}
+// export const SearchProvider = ({children}):React.ReactNode => {
+//     const [character_name,setCharacterName]=
+//     return (
+//         <SearchContext.Provider  value={{
+//             character_name,
+//             character_id,
+//             characer_origin,
+//         }}>
+//             { children }
+//         </SearchContext.Provider>
+
+//     )
+// }
