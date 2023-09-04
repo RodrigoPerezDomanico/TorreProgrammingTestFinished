@@ -12,7 +12,7 @@ const FormSearchUser = ({ getUser }: Props)=>{
       e.preventDefault();
       const username= e.currentTarget.username.value
       // if(!username)return;
-      console.log(username)
+      // console.log(username)
       await getUser(username)
     }
     return (

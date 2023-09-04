@@ -12,11 +12,11 @@ const Page = () => {
     useEffect(()=>{
           
         if(character===null){
-        console.log(id)
+        // console.log(id)
         fetch(`https://rickandmortyapi.com/api/character/${id}`)
             .then((res) => res.json())
             .then((data)=>{
-                console.log(data)
+                // console.log(data)
                 setCharacter(data)
                 setIsLoading(false)
             })

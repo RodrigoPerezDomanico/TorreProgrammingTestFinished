@@ -1,14 +1,30 @@
 'use client';
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import FormSearchUser from '@/components/FormSearchUser'
 import SearchUserList from '@/components/SearchUserList'
+import LastSearched from '@/components/LastSearched'
 import { useState } from 'react';
 import { UserList } from "@/interfaces/userList";
 
 const Home = () => {
   const [userlist, setUserList] = useState<UserList | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [selectedUsers,setSelectedUsers] = useState<string[]>([])
+
+  useEffect(()=>{
+    const selectedUsersLS = localStorage.getItem("selectedUsers") ;
+    if (selectedUsersLS){
+      setSelectedUsers(JSON.parse(selectedUsersLS))
+      // // console.log(JSON.parse(selectedUsersLS))
+      // setTimeout(()=>{
+      //   console.log(selectedUsers)
+
+      // },3000)
+
+  }
+  },[])
+
   const getUser = async (username:string)=>{
     if(username===""){
       setUserList(null);
@@ -38,6 +54,7 @@ const Home = () => {
   <div className='flex  flex-col'>
   <FormSearchUser getUser={getUser}/>
   <SearchUserList userList={userlist}/>
+  <LastSearched/>
   </div>
   </div>
   </>
