@@ -3,7 +3,7 @@ import { SVGProps } from "react"
 const SearchIcon = (props: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    height="50%"
+    height="2vh"
     viewBox="0 0 512 512"
     {...props}
   >

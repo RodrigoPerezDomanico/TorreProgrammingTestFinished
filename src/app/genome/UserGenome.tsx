@@ -12,19 +12,23 @@ const UserGenome = ({character}:Props) => {
     )
   };
   return (
-  <div>
+    <div className='grid justify-center w-full mt-10'>
+  <div className='grid justify-center pt-10 align-middle border border-lime-500 rounded-md w-full p-10'>
     <Image 
     src={character.image}
     width={150}
     height={150}
     alt={`profile img character ${character.name}`}
-    className='roundedd-full'
+    className='justify-self-center'
     />
+    <div className='pt-2'>
     <h1 className='text-white'>Nombre : {character.name}</h1>
     <h2 className='text-white'>Origen: {character.origin.name}</h2>
     <h2 className='text-white'>Gender: {character.gender}</h2>
     <h2 className='text-white'>Actual Location: {character.location.name}</h2>
     <h2 className='text-white'>API URL: {character.url}</h2>
+    </div>
+  </div>
   </div>  
     // <ul className='flex flex-col justify-center mt-1'>
     //     {

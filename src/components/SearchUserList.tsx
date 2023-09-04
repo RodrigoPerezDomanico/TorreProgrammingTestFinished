@@ -12,7 +12,7 @@ const SearchUserList = ({userList}:Props) => {
   };
   return (
     
-    <ul className='flex flex-col justify-center mt-1'>
+    <ul className='flex flex-col justify-center mt-1 mx-6'>
       
         {
         userList.results.map((character,index)=>(

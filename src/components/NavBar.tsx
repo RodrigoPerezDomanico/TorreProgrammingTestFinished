@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     // Link
     
-    <a className='flex justify-center cursor-pointer' href='/'>
+    <a className='flex justify-center cursor-pointer border-b border-slate-950' href='/'>
       <h1 className='text-white text-3xl'>Searchbar</h1>
     </a>
   )

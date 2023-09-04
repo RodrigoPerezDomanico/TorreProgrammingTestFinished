@@ -38,7 +38,7 @@ const Page = () => {
     //   }, [character]);
   if (isLoading){
   return (
-    <div>
+    <div className='grid justify-center text-white mt-20'>
     --- Cargando Datos ---
     
     </div>
