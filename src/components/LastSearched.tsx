@@ -16,7 +16,7 @@ const LastSearched = () => {
       <ul>Ultimos buscados:
         {
             selectedUsers.map((character:User)=>(
-                <li>{character.name}</li>
+                <li key={character.id}>{character.name}</li>
                 ))
 
         }
